@@ -1,10 +1,11 @@
 public abstract class Funcionario {
     
-
+//Atributos
     protected String nome;
     protected int matricula;
     protected double salario;
-
+    
+//Construtores
     public  Funcionario(){
 
     }
@@ -17,7 +18,7 @@ public abstract class Funcionario {
     }
 
 
-
+//Getters e setters
     public String getNome() {
         return nome;
     }
@@ -46,9 +47,10 @@ public abstract class Funcionario {
     }
 
 
-    
+//metodo abstrato
     public abstract double calcularSalarioTotal();
 
+//mostra os valores da classe
     @Override
     public String toString() {
         return "\nNome: " + nome + "\nMatricula: " + matricula + "\nSalario: " + salario;  

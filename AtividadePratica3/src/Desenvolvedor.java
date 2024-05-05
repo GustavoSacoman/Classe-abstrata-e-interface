@@ -1,8 +1,9 @@
-public class Desenvolvedor extends Funcionario {
-    
+public class Desenvolvedor extends Funcionario implements Trabalhavel {
+
+//Atributos
     private String tecnologiaDominada;
     private double bonusPerfomance;
-
+//COnstrutor
     public Desenvolvedor(String nome, int matricula, double salario, String tecnologiaDominada,
             double bonusPerfomance) {
         super(nome, matricula, salario);
@@ -10,7 +11,7 @@ public class Desenvolvedor extends Funcionario {
         this.bonusPerfomance = bonusPerfomance;
     }
 
-
+//Getters e setters
     public String geTecnologiaDominada() {
         return tecnologiaDominada;
     }
@@ -29,18 +30,29 @@ public class Desenvolvedor extends Funcionario {
     }
 
     
-
+//metodo da abstrata
     @Override
     public double calcularSalarioTotal(){
         
         return bonusPerfomance + salario;
         
     }
-
+//Mostra as informacoes da classe
     @Override
     public String toString() {
         return super.toString() + "\nTecnologia dominada: " + tecnologiaDominada + "\nBonus por entrega: " + bonusPerfomance 
-                                + "\nSalario Total: " + calcularSalarioTotal();
+                                + "\nSalario Total: R$" + calcularSalarioTotal() + "Trabalho do Desenvolvedor: " + trabalhar()
+                                + "\nRelatar o processo: " + relatarProcesso();
+    }
+//metodo da interface
+    @Override
+    public String trabalhar() {
+        return "\nCriando um novo projeto... E desenvolvendo na " + tecnologiaDominada + "!";
+    }
+//metodo da interface
+    @Override
+    public String relatarProcesso() {
+        return"\nCriado novo projeto e concluido a programacao dele";
     }
 
 }

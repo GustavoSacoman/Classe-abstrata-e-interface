@@ -1,5 +1,6 @@
 public interface Trabalhavel {
     
-    public void trabalhar();
-    public void relatarProcesso();
+    //metodos 
+    public String trabalhar();
+    public String relatarProcesso();
 }
