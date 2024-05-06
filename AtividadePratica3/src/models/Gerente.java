@@ -1,3 +1,5 @@
+package models;
+
 public class Gerente extends Funcionario implements Trabalhavel {
     
 //Bonus anual sera em porcentagem

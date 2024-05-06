@@ -1,3 +1,4 @@
+package interface_usuario;
 import java.util.Scanner;
 
 public class Console {

@@ -1,5 +1,8 @@
+package controle;
 import java.util.ArrayList;
 import java.util.List;
+
+import models.Funcionario;
 
 public class GerenciarFuncionarios {
     
